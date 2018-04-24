@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="44v-wL-dtz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="H4u-dR-xlh">
+            <objects>
+                <viewController id="ZCK-Eo-I7w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9wt-Oa-FrP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="c1U-CJ-hqT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4tE-Bj-Qq9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azK-Qb-ejm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="-18"/>
+        </scene>
+        <!--考试-->
+        <scene sceneID="bdU-5Y-rzo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="44v-wL-dtz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="考试" id="8vP-Ih-Jo9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZU8-cG-Opa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZCK-Eo-I7w" kind="relationship" relationship="rootViewController" id="zA0-ho-3FL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lW1-VS-gcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="-18"/>
+        </scene>
+    </scenes>
+</document>
