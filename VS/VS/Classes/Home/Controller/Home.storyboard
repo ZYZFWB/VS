@@ -30,7 +30,7 @@
         <scene sceneID="9Tk-fX-tyV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QNg-fk-yws" customClass="BaseNavigationController" customModule="VS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="Gt2-dR-L4w"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home" selectedImage="home_s" id="Gt2-dR-L4w"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vtk-Sy-Z30">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -46,4 +46,8 @@
             <point key="canvasLocation" x="-1514" y="-1361"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="home_s" width="24" height="24"/>
+    </resources>
 </document>

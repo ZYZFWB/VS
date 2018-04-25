@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NormalCVCell" customModule="VS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="185"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="369" height="185"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_default" translatesAutoresizingMaskIntoConstraints="NO" id="glH-wv-kNG">
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="160"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课程名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRE-kk-PIn">
+                        <rect key="frame" x="5" y="165" width="359" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="gWC-ov-Qhm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="glH-wv-kNG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BrY-5a-sbq"/>
+                <constraint firstAttribute="trailing" secondItem="TRE-kk-PIn" secondAttribute="trailing" constant="5" id="FsA-A8-OMo"/>
+                <constraint firstItem="TRE-kk-PIn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Ite-0b-u16"/>
+                <constraint firstItem="TRE-kk-PIn" firstAttribute="top" secondItem="glH-wv-kNG" secondAttribute="bottom" constant="5" id="bgo-nZ-OEU"/>
+                <constraint firstItem="glH-wv-kNG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="e8S-IN-sEd"/>
+                <constraint firstAttribute="bottom" secondItem="TRE-kk-PIn" secondAttribute="bottom" constant="5" id="o5c-1k-M9d"/>
+                <constraint firstAttribute="trailing" secondItem="glH-wv-kNG" secondAttribute="trailing" id="spT-ld-1FY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="369" height="166"/>
+            <connections>
+                <outlet property="imageView" destination="glH-wv-kNG" id="twa-gx-bld"/>
+                <outlet property="label" destination="TRE-kk-PIn" id="olp-Z8-wHp"/>
+            </connections>
+            <point key="canvasLocation" x="102.5" y="19.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_default" width="250" height="164"/>
+    </resources>
+</document>

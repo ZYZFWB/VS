@@ -30,7 +30,7 @@
         <scene sceneID="nKO-Mb-pfZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XSX-KZ-8Ue" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="学习" id="v4D-Qu-u80"/>
+                    <tabBarItem key="tabBarItem" title="学习" image="study" selectedImage="study_s" id="v4D-Qu-u80"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SkE-oG-PfG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -46,4 +46,8 @@
             <point key="canvasLocation" x="-110" y="-755"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="study" width="24" height="24"/>
+        <image name="study_s" width="24" height="24"/>
+    </resources>
 </document>
