@@ -13,14 +13,19 @@ let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 let kNormalItemH = kNormalItemW * 3 / 4
 let kHeaderViewH: CGFloat = 50
 
-private let kCycleViewH: CGFloat = kScreenW * 3 / 8
-
 let kNormalCellID = "kNormalCellID"
 let kHeaderViewID = "kHeaderViewID"
 
+private let kCycleViewH = kScreenW * 3 / 8
+private let kGameViewH: CGFloat = 90
+
 class HomeViewController: BaseViewController {
 
+    
+    
     //MARK: - 懒加载属性
+    fileprivate lazy var homeViewModel: HomeViewModel = HomeViewModel()
+    //课程分类
     fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
         var layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
@@ -40,18 +45,26 @@ class HomeViewController: BaseViewController {
         
         return collectionView
     }()
+    //无限轮播
+    fileprivate lazy var homeCycleView: HomeCycleView = {[unowned self] in
+        let homeCycleView = HomeCycleView.homeCycleView()
+        homeCycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return homeCycleView
+    }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupUI()
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        setupUI()
+//    }
 
+    //MARK: - 设置ui界面
     override func setupUI() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(showFriends))
-        
+      
         view.addSubview(collectionView)
-        
+        collectionView.addSubview(homeCycleView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
         super.setupUI()
     }
     
@@ -62,8 +75,11 @@ class HomeViewController: BaseViewController {
     }
     
     //MARK: - 加载数据
-    fileprivate func loadData() {
-        
+    override func loadData() {
+        homeViewModel.requestCycleData {
+            
+            self.homeCycleView.cycleModels = self.homeViewModel.cycleModels
+        }
     }
 }
 

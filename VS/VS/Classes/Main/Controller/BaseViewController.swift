@@ -14,9 +14,14 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        loadData()
     }
 
     func setupUI() {
         view.backgroundColor = UIColor.randomColor()
+    }
+    
+    func loadData() {
+        
     }
 }
